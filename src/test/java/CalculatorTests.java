@@ -1,6 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,8 +35,6 @@ class CalculatorTests {
 
   @Test
   void testMax() {
-
-
     int max = Integer.MAX_VALUE;
     assertEquals(-2147483648, calculator.add(max, 1));
   }
@@ -61,5 +58,30 @@ class CalculatorTests {
     assertThrows(NullPointerException.class, () -> {
       calculator.add(0, a);
     });
+  }
+
+  @Test
+  void testDivision() {
+    assertEquals(0.5, calculator.divide(1, 2));
+  }
+
+  @Test
+  void testDivisionDelta() {
+    assertEquals(0.333, calculator.divide(1, 3), 0.001);
+  }
+
+  @Test
+  void testDivisionMAX() {
+    assertEquals(Double.MAX_VALUE, calculator.divide(1, 0), 0.001);
+  }
+
+  @Test
+  void testDivisionMIN() {
+    assertEquals(Double.MIN_VALUE, calculator.divide(-1, 0), 0.001);
+  }
+
+  @Test
+  void testDivisionZeroByZero() {
+    assertEquals(0, calculator.divide(0, 0), 0.001);
   }
 }
