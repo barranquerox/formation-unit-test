@@ -15,12 +15,16 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Run tests..."
+          name: Run tests...
           command: mvn test
+      - run:
+          name: Analyze on SonarCloud
+          command: mvn verify sonar:sonar -Dsonar.projectKey=barranquerox_formation-unit-test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   formation-unit-tests:
     jobs:
-      - build
+      - build:
+          context: SonarCloud
