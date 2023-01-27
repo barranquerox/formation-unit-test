@@ -86,9 +86,4 @@ class CalculatorTests {
   void testDivisionZeroByZero() {
     assertEquals(0, calculator.divide(0, 0), 0.001);
   }
-
-  @Test
-  void testFail() {
-    Assert.fail();
-  }
 }
