@@ -9,9 +9,7 @@ class RestAssuredTests {
   String url = "https://demo.guru99.com/V4/sinkministatement.php";
 
   @Test
-  public void testAPI() {
-
-
+  void testAPI() {
 
     int statusCode = given().
         queryParam("CUSTOMER_ID", "68195").
@@ -21,11 +19,11 @@ class RestAssuredTests {
         .get(url).getStatusCode();
 
     System.out.println("Status code est: " + statusCode);
-    assertEquals(200, statusCode);
+    assertEquals(200, statusCode, "The status code is not 200");
   }
 
   @Test
-  public void testApi2() {
+  void testApi2() {
     when().get(url).then().assertThat().statusCode(200);
   }
 }
