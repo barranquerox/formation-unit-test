@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import junit.framework.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -83,5 +84,10 @@ class CalculatorTests {
   @Test
   void testDivisionZeroByZero() {
     assertEquals(0, calculator.divide(0, 0), 0.001);
+  }
+
+  @Test
+  void testFail() {
+    Assert.fail();
   }
 }
