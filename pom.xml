@@ -9,10 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.organization>barranquerox</sonar.organization>
+        <sonar.organization>immobilia</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
