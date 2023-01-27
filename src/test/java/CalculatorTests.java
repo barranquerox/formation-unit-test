@@ -1,9 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import junit.framework.Assert;
+import calculator.Calculator;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,21 +15,13 @@ class CalculatorTests {
 
   @BeforeEach
   void setup() {
-    System.out.println("Setup");
     calculator = new Calculator();
   }
 
-  @AfterEach
-  void teardown() {
-    System.out.println("Teardown");
-  }
 
   @Test
   @DisplayName("1 + 2 = 3")
   void testUnPlusDeuxEgalTrois() {
-    // 1 + 2 = 3
-
-
     // Assert
     assertEquals(3, calculator.add(1,2), "1 + 2 equal 3");
   }
