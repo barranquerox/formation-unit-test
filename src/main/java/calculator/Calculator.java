@@ -8,8 +8,6 @@ public class Calculator {
 
     if (b == 0)
     {
-       System.out.println("Division par zero");
-
        if(a < 0)
          return Double.MIN_VALUE;
        else if(a == 0)
