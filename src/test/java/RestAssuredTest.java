@@ -54,8 +54,21 @@ public class RestAssuredTest {
                 .queryParam("CUSTOMER_ID", 68195)
                 .queryParam("PASSWORD", password)
                 .queryParam("Account_No", "1")
-        when().get(url).then().assertThat().statusCode(200);
+                .when().get(url).then().assertThat().statusCode(200);
 
     }
+
+//    @Test
+//    public void TestApiDownload() {
+//
+//        String password = "1234!";
+//
+//        given()
+//                .queryParam("CUSTOMER_ID", 68195)
+//                .queryParam("PASSWORD", password)
+//                .queryParam("Account_No", "1")
+//        when().get(url).then().
+//
+//    }
 
 }
