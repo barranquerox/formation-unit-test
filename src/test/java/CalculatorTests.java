@@ -22,10 +22,6 @@ class CalculatorTests {
   @Test
   @DisplayName("1 + 2 = 3")
   void testUnPlusDeuxEgalTrois() {
-    // 1 + 2 = 3
-
-    // sonarcloud new rules
-
     // Assert
     assertEquals(3, calculator.add(1,2), "1 + 2 equal 3");
   }
